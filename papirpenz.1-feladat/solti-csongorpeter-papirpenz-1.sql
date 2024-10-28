@@ -1,7 +1,7 @@
 -- 3. feladat
 SELECT * FROM `papirpenz`;
 -- 4. feladat
-SELECT `azon`, `penznem`, `ertek`, ROUND(`ertek` / 420, 2) AS `Euroban` FROM `papirpenz` WHERE `penznem` = 'HUF';
+SELECT `azon`, `penznem`, `ertek`, ROUND(`ertek` / 402, 2) AS `Euroban` FROM `papirpenz` WHERE `penznem` = 'HUF';
 -- 5. feladat
 SELECT DISTINCT `penznem` FROM `papirpenz`;
 -- 6. feladat
@@ -19,7 +19,7 @@ SELECT * FROM `papirpenz` ORDER BY `ertek` DESC LIMIT 1;
 -- 12. feladat
 SELECT SUM(`ertek`) AS `EUR összesen` FROM `papirpenz` WHERE `penznem` = 'EUR';
 -- 13. feladat
-SELECT SUM(`ertek` * 420) AS `Ft` FROM `papirpenz` WHERE `penznem` = 'EUR';
+SELECT SUM(`ertek` * 402) AS `Ft` FROM `papirpenz` WHERE `penznem` = 'EUR';
 -- 14. feladat
 SELECT COUNT(*) AS `db`, CONCAT(SUM(`ertek`), ' lej') AS `osszeg` FROM `papirpenz` WHERE `penznem` = 'RON';
 -- 15. feladat
